@@ -1,3 +1,9 @@
+import CardProfile from "@/components/card-profile/CardProfile";
+
 export default function Home() {
-  return <h1>Hello World!</h1>;
+  return (
+    <main className="flex flex-col items-center w-screen">
+      <CardProfile />
+    </main>
+  );
 }
