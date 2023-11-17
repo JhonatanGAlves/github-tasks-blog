@@ -14,7 +14,7 @@ import Info from "../info/Info";
 export default function CardProfile() {
   return (
     <div
-      className={`py-8 px-10 flex items-center max-w-[54rem] gap-8 rounded-[0.625rem] bg-[--base-profile]`}
+      className={`py-8 px-10 flex items-center w-full gap-8 rounded-[0.625rem] bg-[--base-profile]`}
     >
       <Image
         className="w-[9.25rem] h-[9.25rem] rounded-lg"
@@ -26,14 +26,16 @@ export default function CardProfile() {
       <div className="flex flex-col">
         <div className="flex justify-between items-center mb-2">
           <span className="text-2xl font-bold">Jhonatan Alves</span>
-          <Link
-            className="flex items-center gap-2 text-xs font-bold uppercase text-[--link-blue]"
-            href={"https://github.com/JhonatanGAlves"}
-            target="_blank"
-          >
-            github
-            <ArrowSquareOut size={16} color={"var(--link-blue)"} />
-          </Link>
+          <div className="hover:border-b border-solid border-[--blue-link]">
+            <Link
+              className="flex items-center gap-2 text-xs font-bold uppercase text-[--blue-link]"
+              href={"https://github.com/JhonatanGAlves"}
+              target="_blank"
+            >
+              github
+              <ArrowSquareOut size={16} color={"var(--blue-link)"} />
+            </Link>
+          </div>
         </div>
         <p className="mb-6">
           Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu

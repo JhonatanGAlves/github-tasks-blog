@@ -15,7 +15,7 @@
   --base-profile: #f4e4d4;
   --base-input: #fbf0e5;
 
-  --link-blue: #3294f8;
+  --blue-link: #3294f8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +32,7 @@
     --base-profile: #0b1b2b;
     --base-input: #040f1a;
 
-    --link-blue: #3294f8;
+    --blue-link: #3294f8;
   }
 }
 
