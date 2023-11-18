@@ -14,7 +14,7 @@ import Info from "../../info/Info";
 export default function CardProfile() {
   return (
     <div
-      className={`py-8 px-10 flex items-center w-full gap-8 rounded-[0.625rem] bg-[--base-profile]`}
+      className={`py-8 px-10 flex items-center w-full gap-8 rounded-[0.625rem] bg-[--base-profile] relative`}
     >
       <Image
         className="w-[9.25rem] h-[9.25rem] rounded-lg"
