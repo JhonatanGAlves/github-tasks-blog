@@ -1,3 +1,4 @@
+"use client";
 import CardProfile from "@/components/cards/profile/CardProfile";
 import SearchField from "@/components/search-field/SearchField";
 import CardPost from "@/components/cards/publications/CardPost";
