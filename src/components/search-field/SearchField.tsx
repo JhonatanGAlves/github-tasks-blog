@@ -11,11 +11,9 @@ export default function SearchField({ posts }: SearchFieldProps) {
   return (
     <div className="flex flex-col gap-3 w-full mt-[4.5rem]">
       <div className="flex justify-between items-center">
-        <span className="font-bold text-lg text-[--base-subtitle]">
-          Publications
-        </span>
+        <span className="font-bold text-lg text-[--base-subtitle]">Posts</span>
         <span className="font-normal text-sm text-[--base-span]">
-          {posts.length} publications
+          {posts.length} Posts
         </span>
       </div>
 

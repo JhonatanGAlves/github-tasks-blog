@@ -9,7 +9,7 @@ import {
   Users,
 } from "@phosphor-icons/react";
 
-import Info from "../info/Info";
+import Info from "../../info/Info";
 
 export default function CardProfile() {
   return (
