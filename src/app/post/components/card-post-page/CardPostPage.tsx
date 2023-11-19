@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import moment from "moment";
+
 import {
   ArrowSquareOut,
   Calendar,
@@ -10,11 +12,13 @@ import {
 
 import Info from "@/components/info/Info";
 
-interface CardPostPageProps {
-  postId: number;
-}
-
-export default function CardPostPage({ postId }: CardPostPageProps) {
+export default function CardPostPage({
+  html_url,
+  title,
+  user,
+  created_at,
+  comments,
+}: Issue) {
   return (
     <div
       className={`py-8 px-10 flex items-center w-full gap-8 rounded-[0.625rem] bg-[--base-profile] relative`}
@@ -32,7 +36,7 @@ export default function CardPostPage({ postId }: CardPostPageProps) {
           <div className="border-b border-solid border-transparent hover:border-[--blue-link]">
             <Link
               className="flex items-center gap-2 text-xs font-bold uppercase text-[--blue-link]"
-              href={"https://github.com/JhonatanGAlves"}
+              href={html_url ?? ""}
               target="_blank"
             >
               see on github
@@ -40,21 +44,21 @@ export default function CardPostPage({ postId }: CardPostPageProps) {
             </Link>
           </div>
         </div>
-        <span className="text-2xl font-bold mb-2">
-          JavaScript data types and data structures
-        </span>
+        <span className="text-2xl font-bold mb-2">{title ?? "-"}</span>
         <div className="flex gap-6">
           <Info
             icon={
               <GithubLogo size={16} color={"var(--base-label)"} weight="fill" />
             }
-            text="JhonatanGAlves"
+            text={user?.login ?? "-"}
           />
           <Info
             icon={
               <Calendar size={16} color={"var(--base-label)"} weight="fill" />
             }
-            text="1 day ago"
+            text={
+              created_at ? moment(created_at).startOf("day").fromNow() : "-"
+            }
           />
           <Info
             icon={
@@ -64,7 +68,7 @@ export default function CardPostPage({ postId }: CardPostPageProps) {
                 weight="fill"
               />
             }
-            specificInfo="5"
+            specificInfo={comments}
             text="comments"
           />
         </div>

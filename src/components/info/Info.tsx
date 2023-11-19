@@ -19,7 +19,7 @@ export default function Info({ icon, text, specificInfo }: InfoProps) {
           id ? "text-[--base-span]" : "text-[--base-subtitle]"
         }`}
       >
-        {specificInfo ? `${specificInfo} ${text}` : text}
+        {(specificInfo as number) >= 0 ? `${specificInfo} ${text}` : text}
       </span>
     </div>
   );

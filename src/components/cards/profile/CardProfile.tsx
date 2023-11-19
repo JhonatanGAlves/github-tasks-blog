@@ -88,7 +88,7 @@ export default function CardProfile() {
           </div>
         </>
       ) : (
-        <div className="flex gap-2">
+        <div className="flex gap-2 items-center">
           <Spinner className="animate-spin" size={16} />
           <span>Loading...</span>
         </div>

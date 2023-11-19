@@ -34,3 +34,21 @@ export async function getIssuesByParams(
 
   return response.data.items;
 }
+
+export async function getIssueById(
+  username: string,
+  repo: string,
+  issueId: number
+): Promise<Issue | null> {
+  const response = await axios.get(
+    baseUrl + `repos/${username}/${repo}/issues/${issueId}`
+  );
+
+  if (response.status !== 200) {
+    console.log(`Error getting issue of ${repo} from ${username}.`);
+
+    return null;
+  }
+
+  return response.data;
+}

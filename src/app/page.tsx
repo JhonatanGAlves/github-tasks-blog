@@ -50,6 +50,7 @@ export default function Home() {
                 <CardPost
                   key={index}
                   title={post.title}
+                  number={post.number}
                   created_at={post.created_at}
                   body={post.body}
                 />
