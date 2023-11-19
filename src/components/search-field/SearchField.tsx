@@ -1,13 +1,16 @@
 "use client";
-import { useState } from "react";
 
 interface SearchFieldProps {
-  posts: any[];
+  inputTxt: string;
+  setInputTxt: (inputTxt: string) => void;
+  posts: IssueByParams[];
 }
 
-export default function SearchField({ posts }: SearchFieldProps) {
-  const [inputTxt, setInputTxt] = useState("");
-
+export default function SearchField({
+  posts,
+  inputTxt,
+  setInputTxt,
+}: SearchFieldProps) {
   return (
     <div className="flex flex-col gap-3 w-full mt-[4.5rem]">
       <div className="flex justify-between items-center">
