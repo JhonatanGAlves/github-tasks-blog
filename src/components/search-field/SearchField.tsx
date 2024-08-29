@@ -1,5 +1,7 @@
 "use client";
 
+import { ChangeEvent } from "react";
+
 interface SearchFieldProps {
   inputTxt: string;
   setInputTxt: (inputTxt: string) => void;
@@ -24,7 +26,11 @@ export default function SearchField({
         className="outline-none px-4 py-3 font-normal text-xs placeholder:text-[--base-label] bg-[--base-input] border border-solid border-[--base-border] focus:border-[--blue-link] transition-all rounded-md"
         type="search"
         value={inputTxt}
-        onChange={(e) => setInputTxt(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+          e.stopPropagation();
+
+          setInputTxt(e.target.value);
+        }}
         placeholder="Search content"
       />
     </div>

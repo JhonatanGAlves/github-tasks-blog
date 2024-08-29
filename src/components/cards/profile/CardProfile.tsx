@@ -35,7 +35,7 @@ export default function CardProfile() {
       {!loading ? (
         <>
           <Image
-            className="w-[9.25rem] h-[9.25rem] rounded-lg"
+            className="w-[9.25rem] h-[9.25rem] rounded-full"
             src={user?.avatar_url ?? ""}
             alt="Image profile"
             width={148}
